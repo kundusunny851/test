@@ -22,6 +22,11 @@ app.post('/upload', upload.single('file'), (req, res) => {
     res.json({ message: 'File uploaded successfully!' , file: req.file});
   });
 
+  app.get('/', (req, res) => {
+    // Handle the uploaded file
+    res.json({ message: 'home page'});
+  });
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
